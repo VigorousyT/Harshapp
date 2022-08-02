@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Web Development</title>
+  </head>
+
+  <body>
+    <h1>Tell us somthing about yourself</h1>
+    <form action="/" method="POST">
+        <div>
+            <label for="name">My name is</label>
+            <input type="text" id="name" name="name" />
+        </div>
+
+       <div>
+           <label for="email">My email is</label>
+           <input type="email" name="email" id="email" />
+       </div>
+        <div>
+            <label for="gender">I am a</label>
+            <select id="gender" name="gender">
+                 <option value="male">Male</option> 
+                 <option value="female" selected>Female</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="about">I have worked as</label>
+            <textarea name="about"
+                      id="about"
+                      cols="50"
+                      rows="10"
+                      style="vertical-align: top"
+                      placeholder="I am a..."
+                      minlength="10"
+                      maxlength="100">        Rajesh Ramayan Koothrappali, Ph. D. is a fictional character on the CBS television series The Big Bang Theory, portrayed by British Indian actor Kunal Nayyar. Raj is based on a computer programmer that the show's co-creator, Bill Prady, knew back when he himself was a programmer.
+            </textarea>
+        </div>
+        
+    
+        
+      </form>
+  </body>
+</html>
