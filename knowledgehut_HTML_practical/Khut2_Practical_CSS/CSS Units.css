@@ -1,0 +1,26 @@
+html{
+    font-size: 50px;
+}
+.container{
+    font-size: 34px;
+}
+.maintext{
+    font-size: 2rem;
+}
+
+.maintext1{
+    font-size: 1vh;   /* The text Shown in the page take 1% of the total height of that page. */
+    font-size: 1vw;   /* Similarly, if you change it to vw, which means view width, it means that you are specifying the font size to be 1% of the width of the viewport. */
+}
+
+/* View height and view width are generally used to specify the sizes.
+   So, instead of using the font size property here, 
+   let's specify the width and height of this div,
+   let's say specify the width and height of this div.
+   So, as of now if you save that, you can see that we have this text,
+   but we can limit the width of this div to 50vw,
+   which means that it will be 50% of the total viewport's width.
+   If you save that, the width is limited to 50%. 
+   If you change the size of the viewport, 
+   the width of the div also changes accordingly, 
+   and it works the same way for the height as well. */
