@@ -1,0 +1,127 @@
+<!-- Problem 1 on DSA  -->
+
+Perfectly Filled Buckets
+
+Problem Statement:
+
+Amy has an array A of N prime numbers. She needs to fill K buckets with the integers of the arrays. Initially all the buckets are empty.
+Buckets are numbered from 1 to N.
+Each element of the array can be put in at most one bucket. Also, each bucket must contain at least one integer.
+
+A bucket is considered “perfectly-filled”, if after removing at most one integer from the bucket, the product of the resultant integers in the bucket becomes a perfect square or the bucket will become empty.
+
+For example, bucket with integers: {2, 2, 5} is considered as “perfectly-filled” as after removing integer 5, the product of the resultant integers will become perfect square.
+
+Buckets: {3}, {2, 2}, {5, 3, 3} are “perfectly -filled”.
+
+Amy filled all the K buckets “perfectly”.
+Bi denotes the number of integers in the bucket numbered i.
+She wants to maximize the value of M, M = MIN (B1, B2, …, BK).
+Help to find the maximum possible value of M, if she fills the buckets optimally.
+You are given T independent test cases.
+
+Constraints
+
+1 <= T <= 5
+1 <= K <= N <= 105
+2 <= Ai <= 120
+Ai is prime number.
+All input values are integers.
+
+Input Format
+First-line contains T.
+First line of each test case consists of two space separated integers N and K.
+Second line of each test case consists of N space separated integers denoting the array A.
+
+Output Format
+
+Print in a newline for each test case a single integer denoting the maximum possible value of M.
+
+Sample Input 1
+
+1
+
+5 2
+
+3 2 5 3 2
+
+Sample Output 1
+
+2
+
+Explanation of Sample 1
+
+B1 = 3, bucket-1 contains {3, 5,3}
+
+B2 = 2, bucket-1 contains {2, 2}
+
+M = MIN (B1, B2) = 2
+
+Things to Note for the Candidate:
+
+You can use your own IDE like Visual Studio Code, Eclipse, or any other IDE that you are comfortable with to build your solution code.
+
+The IDE provided on the platform is purely for submission. Avoid using the IDE for coding out the solution.
+
+Test against any custom input in your own IDE. In the IDE provided on the platform, you cannot pass custom test cases and see the output.
+
+Use standard input and standard output in your program for the IDE to run the test cases smoothly against your code.
+
+We are giving a sample problem statement along with a solution that will pass the test cases in the IDE. - Sample Problem Statement (Right Click and Open in New Tab to view.)
+
+<!-- PROBLEM 2 on DSA -->
+
+Making Palindromes
+
+Problem Statement
+
+Amy has a string S consisting of N lowercase English letters. In one operation she can change any letter of the string to either its preceding letter or its succeeding(following) letter in alphabetical order.
+Assume the order to be cyclic, so preceding letter of ‘a’ is ‘z’ and succeeding letter of ‘z’ is ‘a’.
+For Example, if S = “abca”, then she can change the letter ‘c’ to either ‘b’ or ‘d’, in one operation, so string either becomes “abba” or “abda”.
+Find the minimum number of operations required to make string S, a palindrome. Palindrome is a string that reads backward or forward. For example, strings “aba”, “ooo” are palindrome.
+
+You are given T independent test cases.
+
+Constraints
+1 <= T <= 10
+1 <= N <= 105
+
+Input Format
+
+First-line contains T.
+First line of each test case consists of a single integer N.
+Second line of each test case consists of a string S.
+
+Output Format
+
+Print in a newline for each test case a single integer denoting the minimum number of operations required to make string S a palindrome.
+
+Sample Input 1
+
+2
+
+3
+
+aby
+
+3
+
+lol
+
+Sample Output 1
+
+2
+
+0
+
+Explanation of Sample 1
+
+For 1st test case, she can change the first character to ‘z’ and also the last character to ‘z’, in one operation each. So, S = “zbz”
+
+For 2nd test case, S is already a palindrome.
+
+Things to Note for the Candidate:
+You can use your own IDE like Visual Studio Code, Eclipse, or any other IDE that you are comfortable with to build your solution code.
+The IDE provided on the platform is purely for submission. Avoid using the IDE for coding out the solution.
+Test against any custom input in your own IDE. In the IDE provided on the platform, you cannot pass custom test cases and see the output.
+Use standard input and standard output in your program for the IDE to run the test cases smoothly against your code. We are giving a sample problem statement along with a solution that will pass the test cases in the IDE. - Sample Problem Statement (Right Click and Open in New Tab to view.)

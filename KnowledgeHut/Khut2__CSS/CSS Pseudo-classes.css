@@ -1,0 +1,39 @@
+* {
+    padding: 10px;
+    font-family: sans-serif;
+  }
+  
+   .container {
+    background-color: rgb(200, 47, 47);
+    color: white;
+  } 
+  
+   /* div.knowMoreBtn {
+    background-color: rgb(255, 184, 52);
+    width: 100px;
+    margin-left: 10px;
+    text-align: center;
+  }  */
+  
+  /* Add your styles here */
+  div.knowMoreBtn:hover { 
+      background-color: darkorange;
+  } 
+  a:visited {
+      color:aqua;
+  }
+  a:active {
+      color: rgb(34, 56, 74);
+  }
+  a:link {
+      color:blueviolet;
+  }
+
+  .container:hover{
+    background-color: darkorange;
+  }
+
+  .container:active{
+    background-color: cadetblue;
+  }
+  
