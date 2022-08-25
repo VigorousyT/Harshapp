@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const calTaxes  = [100, 210 ,230, 102, 23];
+       const Tax = function(Tax){
+             this.Tax = Tax;
+             this.withTax=function(arr){
+                let output =[];
+                arr.forEach(function (elem){
+                    let withTax = (this.Tax / 100)* elem + elem;
+                    output.push(withTax);
+                }, this);
+                return output;
+             };
+            }
+
+    const gst5 = new Tax(5);
+    const gst18 = new Tax(18)
+
+    console.log(gst5.withTax(calTaxes));   
+    console.log(gst18.withTax(calTaxes));    
+    </script>
+    
+</body>
+</html>
