@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+h2,
+p{
+    font-family: 'Oswald', sans-serif;
+}
+.parent {
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(241, 226, 255);
+}
+
+h2 {
+  color: blueviolet;
+}

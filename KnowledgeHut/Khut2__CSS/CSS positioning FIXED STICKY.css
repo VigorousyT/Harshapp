@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+  }
+  
+  a {
+    color: black;
+  }
+  
+  .parent {
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 300px;
+    background-color: #ff7171;
+    font-size: 24px;
+  }
+  
+  .menu {
+      position: sticky;
+    top: 0px;
+    padding: 10px;
+    background-color: #ffaa71;
+    z-index: 2;
+  }
+  
+  .bookmarks {
+    position: relative;
+    height: 40px;
+  }
+  
+  .menu ul {
+    list-style: none;
+  }
+  
+  .content {
+    position: relative;
+    margin-top: 60px;
+    padding: 30px;
+  }
+  
