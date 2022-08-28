@@ -1,0 +1,59 @@
+<html>
+  <head></head>
+  <body>
+    <input type="text" id="title" placeholder="Enter the title" /><br />
+    <input type="text" id="author" placeholder="Enter the Author Name" /><br />
+    <button onclick="addPost()">Add Post</button>
+    <table border="2" align="center">
+      <thead>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+      </thead>
+      <tbody id="dd"></tbody>
+    </table>
+    <script>
+      function addPost() {
+        var newPost = {};
+        newPost.title = document.getElementById("title").value;
+        newPost.author = document.getElementById("author").value;
+        fetch("http://localhost:3000/posts", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newPost),
+        })
+          .then(function (res) {
+            console.log(res);
+            getPosts();
+          })
+          .catch(function (err) {
+            console.log(err);
+          });
+      }
+      getPosts();
+      function getPosts() {
+        fetch("http://localhost:3000/posts").then(function (res) {
+          res.json().then(function (posts) {
+            document.getElementById("dd").innerHTML = "";
+            posts.forEach(function (post, i) {
+              var newtr = document.createElement("tr");
+              var titletd = document.createElement("td");
+              titletd.innerHTML = post.title;
+              var idtd = document.createElement("td");
+              idtd.innerHTML = post.id;
+              var authortd = document.createElement("td");
+              authortd.innerHTML = post.author;
+              newtr.appendChild(idtd);
+              newtr.appendChild(titletd);
+              newtr.appendChild(authortd);
+
+              document.getElementById("dd").appendChild(newtr);
+            });
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

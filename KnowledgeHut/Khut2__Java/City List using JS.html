@@ -1,0 +1,87 @@
+<html>
+  <head></head>
+  <body>
+    <select name="Show entries" , id="dd" ; align="center" ;>
+      <option value="1" id="dd">1</option>
+      <option value="2" id="dd">2</option>
+      <option value="3" id="dd">3</option>
+      <option value="4" id="dd">4</option>
+      <option value="5" id="dd">5</option>
+    </select>
+    <table border="10px" align="center">
+      <thead></thead>
+      <tbody id="dd"></tbody>
+    </table>
+    <script>
+      fetch("https://restcountries.com/v2/all")
+        .then(function (res) {
+          res
+            .json()
+            .then(function (coutries) {
+              coutries.forEach(function (country, i) {
+                var newtr = document.createElement("tr");
+                var nametd = document.createElement("td");
+                nametd.innerHTML = country.name;
+                var capitaltd = document.createElement("td");
+                capitaltd.innerHTML = country.capital;
+                var imgtd = document.createElement("td");
+                var flagImg = document.createElement("img");
+                flagImg.src = country.flag;
+                flagImg.style.width = "100px";
+                imgtd.appendChild(flagImg);
+                newtr.appendChild(nametd);
+                newtr.appendChild(imgtd);
+                newtr.appendChild(capitaltd);
+                document.getElementById("dd").appendChild(newtr);
+              });
+            })
+            .catch(function () {});
+        })
+        .catch(function (err) {
+          console.log(err);
+        });
+    </script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="2" align="center">
+      <thead></thead>
+      <tbody id="dd"></tbody>
+    </table>
+    <script>
+      fetch("https://restcountries.com/v2/all")
+        .then(function (res) {
+          res
+            .json()
+            .then(function (countries) {
+              countries.forEach(function (Country, i) {
+                var newtr = document.createElement("tr");
+                var nametd = document.createElement("td");
+                nametd.innerHTML = country.name;
+                var capitaltd = document.createElement("td");
+                capitaltd.innerHTML = country.capital;
+                var imgtd = document.createElement("td");
+                var flagImg = document.createElement("img");
+                flagImg.src = country.flag;
+                flagImg.style.width = "100px";
+                imgtd.appendChild(flagImg);
+                newtr.appendChild(nametd);
+                newtr.appendChild(imgtd);
+                newtr.appendChild(capitaltd);
+                document.getElementById("dd").appendChild(newtr);
+              });
+            })
+            .catch(function () {});
+        })
+        .catch(function (err) {
+          console.log(err);
+        });
+    </script>
+  </body>
+</html> -->
