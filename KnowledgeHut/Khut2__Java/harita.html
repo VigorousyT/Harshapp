@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Employee(fn, ln, age) {
+        (this.firstname = fn),
+          (this.lastname = ln),
+          (this.age = age),
+          (this.fullname = function () {
+            return this.firstname + " " + this.lastname;
+          });
+
+        this.details = function () {
+          return this.fullname() + " my age is " + this.age;
+        };
+      }
+
+      var emp1 = new Employee("haritha", "potla", 28);
+      var emp2 = new Employee("ravivenkatesh", "myneni", 31);
+      var emp3 = new Employee("aahanya", "myneni", 4);
+
+      console.log(emp1.fullname());
+      console.log(emp2.details());
+    </script>
+  </body>
+</html>

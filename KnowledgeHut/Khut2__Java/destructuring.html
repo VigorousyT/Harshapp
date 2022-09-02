@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var obj = {
+        firstName: "Harsh",
+        lastName: "yadav",
+        age: 21,
+        address: {
+          pincode: 276001,
+          city: "Azamgarh",
+        },
+      };
+      var {
+        firstName,
+        age,
+        address: { city },
+      } = obj;
+      console.log(obj.firstName);
+      console.log(firstName);
+      console.log(obj.address.city);
+      console.log(obj.city);
+
+      var std1 = {
+        firstName: "Harsh",
+        lastName: "dhsjfcjidsfcij",
+      };
+      std1 = {
+        ...std1,
+        lastName: "Yadav",
+      };
+      console.log(std1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let add = function(a,b){
+      //     console.log(a=b)
+      // }
+      var ar = [12, 49, 29, 10, 33, 22, 16];
+      var br = ar.filter((elem) => elem % 2 === 0);
+      console.log(br);
+
+      function Employee(fn, ln, a) {
+        this.firstName = fn;
+        this.lastName = ln;
+        this.age = a;
+        this.ar = [11, 24, 34, 54];
+        this.avg = 0;
+        this.full = function () {
+          setTimeout(() => {
+            console.log(this.firstName + " " + this.lastName);
+          }, 5000);
+        };
+        this.getAvg = function () {
+          this.ar.forEach((a) => {
+            this.avg = this.avg + a;
+          });
+        };
+      }
+      var emp1 = new Employee("praveen", "gubbala", 39);
+      var emp2 = new Employee("Harsh", "Yadav", 21);
+      var emp3 = new Employee("Vijay", "Yadav", 23);
+
+      //   emp1.fullname();
+      //   emp2.fullname();
+    </script>
+  </body>
+</html>
