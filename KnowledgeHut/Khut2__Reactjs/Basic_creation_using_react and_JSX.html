@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!--React -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- React DOM -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!--Babel -->
+  </head>
+  <body>
+    <h1>This is created by HTML.....</h1>
+    <div id="REACT"></div>
+    <div id="JSX"></div>
+    <script type="text/babel">
+      //Creating With React
+      var rh1 = React.createElement(
+        "h1",
+        null,
+        "This is created using React....."
+      );
+      ReactDOM.render(rh1, document.getElementById("REACT"));
+      //Created With React
+
+      //Creating Through JSX
+      var xh1 = <h1>This is Created Using JSX..... </h1>;
+      ReactDOM.render(xh1, document.getElementById("JSX"));
+      //Created Through JSX.
+    </script>
+  </body>
+</html>
