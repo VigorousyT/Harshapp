@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!--React -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- React DOM -->
+    <style>
+      #Vrindavan {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      #gg {
+        color: goldenrod;
+        font-size: 40px;
+      }
+      .ll {
+        color: brown;
+      }
+      .Harsh {
+        color: aqua;
+        padding: 10px;
+        margin: 20px;
+      }
+      .bend {
+        font-style: italic;
+        background-color: aqua;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="gg">-♥︎-♥︎-RadheKrishna-♥︎-♥︎-</h1>
+    </div>
+    <div id="Bansi Bihari" class="Harsh"></div>
+    <div id="Radhe"></div>
+    <div id="Vrindavan"></div>
+    <script>
+      //-------------------------------JavaScript------------------------------//
+      var radhekrishna =
+        "https://i0.wp.com/bhaktigyaan.com/wp-content/uploads/2021/09/radha-ashtami-2021radha-ashtami-vrat-muhoort-evam-pooja-vidhi.-2.jpg";
+      var New =
+        "https://i.pinimg.com/originals/ec/83/19/ec8319e3cedbede461ba8b27dc091198.jpg";
+      var Krishna = [
+        "Gopinath",
+        "Giridhari",
+        "Mohan",
+        "Jagganath",
+        "Radhe Shayam",
+        "More and More...",
+      ];
+      var newh1 = document.createElement("h1");
+      newh1.innerHTML =
+        "Hare Krishna Hare krishna krishna krishna Hare Hare , Hare Rama Hare Rama Rama Rama Hare Hare";
+      newh1.style.color = "red";
+      newh1.style.backgroundColor = "blue";
+      newh1.classList.add("dd");
+      document.getElementById("Bansi Bihari").appendChild(newh1);
+      //-----Adding Image Using JavaScript--
+      var myKrishna = document.createElement("img");
+      myKrishna.src = radhekrishna;
+      myKrishna.style.width = "300px";
+      document.getElementById("Bansi Bihari").appendChild(myKrishna);
+      //-----Image Added through JavaScript--
+
+      //-------------------------------JavaScript------------------------------//
+
+      //---------------------------------REACT---------------------------------//
+      var Krishna1 = React.createElement(
+        "h1", //first argument
+        { style: { backgroundColor: "" }, class: "bend" },
+        "Lord Krishna And his Names",
+        //----- Creating Nested Object----//
+        Krishna.map((Names) => {
+          return React.createElement("li", null, Names);
+        })
+        //-----Created Nested Object....//
+      );
+      ReactDOM.render(Krishna1, document.getElementById("Radhe"));
+      //-----Adding Image Through React
+      var Krishna2 = React.createElement(
+        "img",
+        { src: New, width: "500px" },
+        null
+      );
+      ReactDOM.render(Krishna2, document.getElementById("Vrindavan"));
+      //-----Added Image Through React
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!--React -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- React DOM -->
+    <style>
+      #gg {
+        color: goldenrod;
+      }
+      .ll {
+        color: brown;
+      }
+      .Harsh {
+        color: aqua;
+        padding: 10px;
+        margin: 20px;
+      }
+      .bend {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="gg">This is HTML5...</h1>
+    </div>
+    <div id="vijay" class="Harsh"></div>
+    <div id="gubbala"></div>
+    <script>
+      // Creating through JavaScript
+      var dogs = ["Husky", "Pug", "Retriver", "Pitbull"];
+      var newh1 = document.createElement("h1");
+      newh1.innerHTML = "This is created by JavaScript...";
+      newh1.style.color = "red";
+      newh1.style.backgroundColor = "blue";
+      newh1.classList.add("dd"); //Creating a class
+      document.getElementById("vijay").appendChild(newh1);
+
+      // Created Through JavaScript
+
+      // Creating through React
+      var gubbala1 = React.createElement(
+        "h1", //first argument
+        { style: { backgroundColor: "" }, class: "bend" }, //second argument In the case of null we can give style to the element created
+        "This is created by Simple React", //string that is requierd
+        dogs.map((dogs) => {
+          return React.createElement("li", null, dogs);
+        })
+      );
+      ReactDOM.render(gubbala1, document.getElementById("gubbala"));
+      // Created through React.....
+    </script>
+  </body>
+</html>
