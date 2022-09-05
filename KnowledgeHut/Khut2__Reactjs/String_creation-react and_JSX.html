@@ -20,17 +20,24 @@
     <div id="REACT"></div>
     <div id="JSX"></div>
     <script type="text/babel">
-      //Creating With React
+      var ReegularStudents = [
+        "Harsh",
+        "Haritha",
+        "Vijay",
+        "Ansari",
+        "Rushikesh",
+      ];
+      //Creating With React.
       var rh1 = React.createElement(
         "h1",
         null,
         "This is created using React....."
       );
       ReactDOM.render(rh1, document.getElementById("REACT"));
-      //Created With React
+      //Created With React.
 
-      //Creating Through JSX
-      var xh1 = <h1>This is Created Using JSX..... </h1>;
+      //Creating Through JSX.
+      var xh1 = <h1>This is Created Using JSX.....{123 + 354}</h1>; //--you can assign a Html to a variable..
       ReactDOM.render(xh1, document.getElementById("JSX"));
       //Created Through JSX.
     </script>

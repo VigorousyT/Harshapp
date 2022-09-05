@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      ul {
+        color: indigo;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="list"></div>
+    <script type="text/babel">
+      function Button() {
+        return <button>Add Regular Students</button>;
+      }
+      function List() {
+        return (
+          <div>
+            <button />
+            <ul>
+              <li>Harsh</li>
+              <li>Haritha</li>
+              <li>Vijay</li>
+              <li>Ansari</li>
+              <li>Bikram</li>
+            </ul>
+          </div>
+        );
+      }
+      ReactDOM.render(<List />, document.getElementById("list"));
+    </script>
+  </body>
+</html>
