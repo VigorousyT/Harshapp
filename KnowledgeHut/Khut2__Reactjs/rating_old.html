@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      .bend {
+        font-style: italic;
+      }
+      .betterview {
+        border: 1px solid;
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function Rating() {
+        var [r, setR] = React.useState("");
+        var [ratings, setRatings] = React.useState([]);
+        function rate(v) {
+          setR(v);
+          var temp = [...ratings];
+          temp.push(v);
+          setRatings(temp);
+        }
+        return (
+          <div className="betterview">
+            <button
+              onClick={() => {
+                rate(1);
+              }}
+            >
+              1
+            </button>
+            <button
+              onClick={() => {
+                rate(2);
+              }}
+            >
+              2
+            </button>
+            <button
+              onClick={() => {
+                rate(3);
+              }}
+            >
+              3
+            </button>
+            <button
+              onClick={() => {
+                rate(4);
+              }}
+            >
+              4
+            </button>
+            <button
+              onClick={() => {
+                rate(5);
+              }}
+            >
+              5
+            </button>
+            <h1>Rating:{r}/5</h1>
+            <h1>
+              Total Rating:{ratings.reduce((a, b) => a + b, 0) / ratings.length}
+            </h1>
+            <h1>5 ----- {ratings.filter((x) => x === 5).length}</h1>
+            <h1>4 ----- {ratings.filter((x) => x === 4).length}</h1>
+            <h1>3 ----- {ratings.filter((x) => x === 3).length}</h1>
+            <h1>2 ----- {ratings.filter((x) => x === 2).length}</h1>
+            <h1>1 ----- {ratings.filter((x) => x === 1).length}</h1>
+          </div>
+        );
+      }
+      ReactDOM.render(<Rating></Rating>, document.getElementById("root"));
+      console.dir(Array);
+    </script>
+  </body>
+</html>
+<!-- 
+    state
+    props
+ -->
