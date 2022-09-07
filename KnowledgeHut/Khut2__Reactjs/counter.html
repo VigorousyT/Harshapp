@@ -11,6 +11,13 @@
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    .Count {
+      border: 1px solid;
+      margin: 10px;
+      padding: 10px;
+    }
+  </style>
   </head>
   <body>
     </div>
@@ -19,36 +26,43 @@
     <!-- Inc and Dec will get updated... -->
 
     <script type="text/babel">
+      var Todolist = React.memo(function(){
+        var [todos, settodos] = React.useState(['asd', 'slkjj'])
+        var [newtask, setnewtask] = React.useState('')
+        function addTask(){
+          settodos([...todos, newtask])
+        }
+        return(
+          <div className='Count'>
+            <input type="text" onChange = {(e) => {setnewtask(e.target.value)}}/>
+            <button onClick ={addTask}>Add Tasks</button>
+            <ul>
+              {todos.map((t,i) => {
+                return (<li>{t}</li>)
+              })}
+            </ul>
+          </div>
+        )
+      } )
         
-      function Inc(){
-        return;
-      }
-      function Counter(props) {
-        console.log("props:::::", props);
-        var [count, setcount] = React.useState(props.start);
-        function inc() {
-          setcount(count + props.step);
+      function CountMachine(){
+        var [count,setcount] = React.useState(0);
+        function Inc(){
+             setcount (count+1)
         }
-        function dec() {
-          setcount(count - props.step);
+        function Dec(){
+             setcount (count-1)
         }
         return (
-          <div>
-            <h1>Count:{count}</h1>
-            <button onClick={inc}>Increase</button> 
-            <button onClick={dec}>Decrease</button>
+          <div className = "Count"> 
+             <h1>Count:{count}</h1>
+             <button onClick={Inc}>Inc..</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+             <button onClick={Dec}>Dec..</button>
+             <Todolist></Todolist>
           </div>
-        );
+        )
       }
-      function Buttons() {
-        return (
-          <div>
-            <Counter start={100} step={10}></Counter>
-            <Counter start={200} step={50}></Counter>
-          </div>
-        );
-      }
-      ReactDOM.render(<Buttons></Buttons>, document.getElementById("root"));
+      ReactDOM.render(<CountMachine></CountMachine>, document.getElementById("root"));
     </script>
-  </body>
+  </body>   
 </html>
