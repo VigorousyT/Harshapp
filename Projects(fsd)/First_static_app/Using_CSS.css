@@ -1,0 +1,14 @@
+html{
+    /* font-family: 'Tiro Devanagari Hindi', serif; */
+    font-family: 'Merriweather', serif;
+    min-height: 100vh;
+    max-width : 1280px;
+    background-color: white;
+    margin: auto;
+}
+
+body{
+    margin: 0px !important;
+    background-color: white;
+    border: 1px solid #ddd;
+} 

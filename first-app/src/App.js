@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
-import './Todolist'
+import CM from "./comp";
+import Counter from './Counter';
+import Rfooter from "./Rfooter";
+import Rlogo from './Rlogo';
+import Todolist from './Todolist';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          The App was Started Working
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div><Rlogo></Rlogo></div>
+      <div><Rfooter></Rfooter></div>
+
+      <div className="tod">
+
+        <h1>The App is Started Working</h1>
+        <Todolist></Todolist>
+        <Counter></Counter>
+        <CM></CM>
+      </div>
     </div>
   );
 }
