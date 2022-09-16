@@ -1,5 +1,5 @@
 import React from "react";
-import UC from "./hooks";
+import { UC } from "./hooks";
 
 function Counter() {
   var [count, inc, dec] = UC();

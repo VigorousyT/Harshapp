@@ -21,6 +21,15 @@ function Todolist() {
     console.log(e.key);
   }
 
+  //-------------Creating A Delete function------------//
+  function del(i) {
+    var temp = [...todos]
+    temp.splice(i, 1)
+    setTodos([...temp])
+  }
+  //-------------Created A Delete function-----and using it inside the todos.map <button onClick={() => { del(i) }}>-------//
+  // Here inside the todos.map <button> we use a anonymous function. using it directely is not a good approach. like this <button onClick={del(i)}>
+
   return (
     <div className="tod">
       <h1 className="tod">TODOLIST</h1>
@@ -38,7 +47,9 @@ function Todolist() {
         Add Task
       </button>
       {todos.map((t, i) => {
-        return <li>{t}</li>;
+        return <li>{t}
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onClick={() => { del(i) }}>Delete</button>
+        </li>;
       })}
     </div>
   );

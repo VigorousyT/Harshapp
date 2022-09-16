@@ -1,6 +1,6 @@
 import React from "react";
 
-function UC() {
+export function UC() {
     var [count, setCount] = React.useState(0);
     function inc() {
         setCount(count + 1);
@@ -11,4 +11,3 @@ function UC() {
     return [count, inc, dec]
 }
 
-export default UC

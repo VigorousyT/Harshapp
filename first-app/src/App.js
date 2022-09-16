@@ -1,26 +1,15 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 import './App.css';
-import CM from "./comp";
-import Counter from './Counter';
-import Rfooter from "./Rfooter";
-import Rlogo from './Rlogo';
-import Todolist from './Todolist';
-
 
 
 function App() {
   return (
-    <div>
-      <div><Rlogo></Rlogo></div>
-      <div><Rfooter></Rfooter></div>
-
-      <div className="tod">
-
-        <h1>The App is Started Working</h1>
-        <Todolist></Todolist>
-        <Counter></Counter>
-        <CM></CM>
-      </div>
+    <div className="border m-2 p-2">
+      <h1 className="country">THE LIST OF COUNTRIES</h1>
+      <Link to="/Home" className="tod">Home</Link>&nbsp;&nbsp;
+      <Link to="/countries" className="tod">Click For Countries</Link>
+      <Outlet></Outlet>
     </div>
   );
 }

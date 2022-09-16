@@ -3,17 +3,15 @@
 }
 
 .App-logo {
-  height: 14vmin;
-  max-width: 50%;
+  height: 23vmin;
   top: 10px;
   right: 10px;
-  float: right;
   position: fixed;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 1s linear;
+    animation: App-logo-spin infinite 5s linear;
   }
 }
 
@@ -27,13 +25,14 @@
 
 .App-link {
   color: black;
+  float: left;
   position: fixed;
-  left: 5px;
+  left: 1px;
   bottom: 2px;
   width: 100%;
-  background-color: aqua;
+  background-color: whitesmoke;
   text-align: center;
-  text-decoration: 10px solid;
+  text-decoration: 100px solid;
 }
 
 @keyframes App-logo-spin {
