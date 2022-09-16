@@ -12,8 +12,8 @@ function Countries() {
   return (
     <div className="Newtod">
       <h1 className="tod">COUNTRIES</h1>
-      <div className="d-flex">
-        <div className="w-50">
+      <div className="d-flex h-100">
+        <div className="w-50 h-100 overflow-auto">
           <ul>
             {countries &&
               countries.map((c, i) => {
