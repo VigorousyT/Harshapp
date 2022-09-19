@@ -145,3 +145,8 @@ code {
   width: 31vh;
   height: 13vh;
 }
+
+.comp {
+  float: right;
+  border: 2px solid darkcyan;
+}

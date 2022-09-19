@@ -11,8 +11,11 @@ function Countryinfo() {
   }, [states]);
   return (
     <div>
-      <h2>{country.name}</h2>
-      <h2>{country.capital}</h2>
+      <h3>Country:- {country.name}</h3>
+      <h3>Capital:- {country.capital}</h3>
+      <h3>Region:- {country.subregion}</h3>
+      <h4>Launguage Spoken:- {country.nativeName}</h4>
+      <h4>Population:- {country.population}</h4>
       <img src={country.flag} width="300px" alt="" />
     </div>
   );

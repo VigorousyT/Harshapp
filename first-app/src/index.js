@@ -11,7 +11,8 @@ import {
 import Countries from './Countries';
 import Home from './Home';
 import Countryinfo from './Countryinfo';
-
+import Aboutus from './Aboutus';
+import Contactus from './Contactus';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,9 +20,10 @@ root.render(
     <Routes>
       <Route path='/' element={<App></App>}>
         <Route index element={<Home></Home>}></Route>
-        <Route path='/Countries' element={<Countries></Countries>}><Route path='/Countries/:z' element={<Countryinfo></Countryinfo>}></Route></Route>
+        <Route path='/Countries' element={<Countries></Countries>}><Route path=':z' element={<Countryinfo></Countryinfo>}></Route></Route>
         <Route path='/Home' element={<Home></Home>}></Route>
-
+        <Route path='/Aboutus' element={<Aboutus></Aboutus>}></Route>
+        <Route path='/Contactus' element={<Contactus></Contactus>}></Route>
       </Route>
     </Routes>
   </BrowserRouter>

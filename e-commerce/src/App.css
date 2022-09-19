@@ -1,11 +1,5 @@
-.head {
-  float: top;
+.App {
   text-align: center;
-  border-radius: 5px;
-  border: 5px solid hotpink;
-  border-left: 30px solid red;
-  border-right: 30px solid red;
-  border-width: 100px;
 }
 
 .App-logo {
@@ -20,9 +14,14 @@
 }
 
 .App-header {
-  float: center;
-  min-height: 2vh;
-  align-items: left;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .App-link {
@@ -34,6 +33,6 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(10800deg);
+    transform: rotate(360deg);
   }
 }

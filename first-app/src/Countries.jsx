@@ -13,19 +13,19 @@ function Countries() {
     <div className="Newtod">
       <h1 className="tod">COUNTRIES</h1>
       <div className="d-flex h-100">
-        <div className="w-50 h-100 overflow-auto">
-          <ul>
+        <div className="w-50 h-100">
+          <ul className="border">
             {countries &&
               countries.map((c, i) => {
                 return (
                   <li key={i}>
-                    <Link to={`/Countries/${c.alpha2Code}`}>{c.name}</Link>
+                    <Link to={`${c.alpha2Code}`}>{c.name}</Link>
                   </li>
                 );
               })}
           </ul>
         </div>
-        <div className="w-50">
+        <div className="border w-100">
           <Outlet></Outlet>
         </div>
       </div>
