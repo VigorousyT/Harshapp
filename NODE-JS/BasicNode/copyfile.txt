@@ -1,0 +1,8 @@
+ Here we are importing the fs- which is not other than the file system.
+
+
+ here in the 2nd line we are simply rendering the data of copyfile.txt file Name. now, here we will have a method named readFileSync(), so readFileSync will read that file and give the data is in the hexadecimal data that is not even in the string format after that we are going to render it on the webpage.
+ var fs is used for import the data from modules like we have done in React. but here we have to do it like  that.
+
+ 
+ this is a process for reading file from the vs code terminal and we can read the javascript with be rendering on the webpage...
