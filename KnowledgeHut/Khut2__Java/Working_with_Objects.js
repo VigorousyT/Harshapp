@@ -15,7 +15,6 @@ const apple = {
         hq: 'Cupertino, California, US',
     },
 };
-
 // Write your code below this line
 const {
     company,
@@ -24,7 +23,7 @@ const {
     details: { ceo },
 } = apple;
 
-// Write your code above this line
+// Write your code above this line. --Console.log Started
 try {
     console.log(
         `${company} headed by ${ceo} was trading for $${currPrice} on ${exchange}`

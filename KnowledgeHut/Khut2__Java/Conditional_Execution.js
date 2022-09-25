@@ -4,9 +4,9 @@ code Example */
 'use strict';
 let temperature = 20;
 if (temperature < 15) {
-    console.log("It's cold outside");
-}else {
-    console.log("It's warm outside");
+  console.log("It's cold outside");
+} else {
+  console.log("It's warm outside");
 }
 
 
@@ -16,20 +16,23 @@ code example */
 
 'use strict';
 let grade;
-let percentage = 85;
+let percentage = 50;
 // Insert your code here, right before the console.log() statement
 
 if (percentage <= 100 && percentage >= 91) {
-    grade = 'A+';
-  } else if (percentage <= 90 && percentage >= 81) {
-    grade = 'B+';
-  } else if (percentage <= 80 && percentage >= 71) {
-    grade = 'C+';
-  } else if (percentage <= 70 && percentage >= 61) {
-    grade = 'D+';
-  } else {
-    grade = 'Fail';
-  }
+  grade = 'A+';
+} else if (percentage <= 90 && percentage >= 81) {
+  grade = 'B+';
+} else if (percentage <= 80 && percentage >= 71) {
+  grade = 'C+';
+} else if (percentage <= 70 && percentage >= 61) {
+  grade = 'D+';
+} else if (percentage <= 60 && percentage >= 45) {
+  grade = 'E+/Pass';
+}
+else {
+  grade = 'F-/Fail';
+}
 
 console.log(`The student has secured ${grade}`);
 
@@ -43,23 +46,23 @@ let item = 'Lettuce';
 let type;
 // Insert your code here, before the console.log() statement
 
-switch(item){
-    case 'Apple':
-    case 'Banana':
-    case 'Kiwi':
-    case 'Strawberry':
-        type = 'fruit';
-        break;
-    case 'Lettuce':
-    case 'Potato':
-    case 'Celery':
-    case 'Eggplant':
-        type = 'vegetable';
-        break;
+switch (item) {
+  case 'Apple':
+  case 'Banana':
+  case 'Kiwi':
+  case 'Strawberry':
+    type = 'fruit';
+    break;
+  case 'Lettuce':
+  case 'Potato':
+  case 'Celery':
+  case 'Eggplant':
+    type = 'vegetable';
+    break;
 
-    default: {
-        throw new Error ('Unable to identify item...');
-    }
+  default: {
+    throw new Error('Unable to identify item...');
+  }
 }
 console.log(`${item} is a ${type}`);
 
@@ -71,10 +74,10 @@ Code Example */
 
 const today = 'Thursday';
 const typeOfDay = today === 'Saturday' || today === 'Sunday'
-?'Weekend'
-: today === 'Wednesday'
-? 'Hump Day'
-: 'Weekday' ;
+  ? 'Weekend'
+  : today === 'Wednesday'
+    ? 'Hump Day'
+    : 'Weekday';
 
 console.log(`${today} - ${typeOfDay}`);
 
@@ -95,8 +98,8 @@ const database = {
 };
 let checkPassword = database[inputUsername].password === inputPassword;
 
-checkPassword && 
-console.log (`${database[inputUsername].user || `User`} is logged in...`)
+checkPassword &&
+  console.log(`${database[inputUsername].user || `User`} is logged in...`)
 
 
 /* Nullish Coalescing Operator conditional statement
@@ -112,16 +115,14 @@ let tempData = {
 };
 
 console.log(
-  `${tempData.location}: ${
-    tempData.sensor1 || tempData.sensor2 || tempData.sensor3
+  `${tempData.location}: ${tempData.sensor1 || tempData.sensor2 || tempData.sensor3
   } degrees`
 );
 
 console.log(
-    `${tempData.location}: ${
-      tempData.sensor1 ?? tempData.sensor2 ?? tempData.sensor3
-    } degrees`
-  );
+  `${tempData.location}: ${tempData.sensor1 ?? tempData.sensor2 ?? tempData.sensor3
+  } degrees`
+);
 
 
 
