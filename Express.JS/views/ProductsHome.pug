@@ -5,5 +5,12 @@ html
        div 
           h1 "this is created by PUG file..."   
        ul 
-          each val of prod      //--here I have to ask that what is the difference of using val of prod and val in prod question No.1?
-             li= val.title
+          each val of prod     
+             li 
+               a(href="pugpoducts/"+val.id)= val.title
+
+
+
+
+               
+//--here I have to ask that what is the difference of using val of prod and val in prod question No.1?
