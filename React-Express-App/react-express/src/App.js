@@ -6,7 +6,6 @@ function App() {
     <div>
       <div className="App">
         <h1>WELCOME TO 👌REACT-EXPRESS-COLAB .or. (KHICHDI🤣)</h1>
-        <h2>QUIZ APP...🤫</h2>
       </div>
       <div>
         <Quiz></Quiz>
