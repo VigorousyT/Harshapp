@@ -13,7 +13,9 @@ function Quiz() {
   }, []);
   return (
     <div>
-      <h1>QUIZ APP...🤫</h1>
+      <h2 class="text-center">QUIZ 🤫(Play to get rewarded)...🤫</h2>
+      <br />
+      <br />
       <h4>
         {questions.map((question) => {
           return <QuizQuestions question={question}></QuizQuestions>;

@@ -4,12 +4,13 @@ export default function QuizQuestions(props) {
   console.log(props);
   return (
     <div>
-      <h4>{props.question.question}</h4>
+      <h3 class="text-left">{props.question.question}</h3>
       {props.question.answers.map((ans) => {
         return (
-          <>
-            <input type="radio" name="ans" />:{ans}
-          </>
+          <div class="form-floating mb-4 mt-4">
+            <input type="radio" name="ans" />
+            {ans}
+          </div>
         );
       })}
     </div>

@@ -1,14 +1,13 @@
+import { Outlet } from 'react-router-dom';
 import './App.css';
-import Quiz from './Quiz';
+import Home from './Home';
 
 function App() {
   return (
     <div>
-      <div className="App">
-        <h1>WELCOME TO 👌REACT-EXPRESS-COLAB .or. (KHICHDI🤣)</h1>
-      </div>
       <div>
-        <Quiz></Quiz>
+        <Home></Home>
+        <Outlet></Outlet>
       </div>
     </div>
   );
