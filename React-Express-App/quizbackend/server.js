@@ -57,21 +57,28 @@ app.get("/getAllProducts", function (req, res) {
     })
 })
 
-app.get("/ProductDetails/:id", function (req, res) {
-    console.log(req.params)
+app.get("/getAllProducts/:id", function (req, res) {
     MongoClient.connect('mongodb://localhost:27017', (err, client) => {
         if (err) throw err
         const db = client.db('test')
         db.collection('products').find({ _id: ObjectId(req.params.id) }).toArray()
             .then(function (data) {
-                console.log(data)
+                res.send({ product: data[0] })
             })
             .catch(err => console.log('err', err))
     })
-    res.send({ message: 'please wait' })
 })
 
-
-
+app.delete('/deleteProduct/:id', function (req, res) {
+    MongoClient.connect('mongodb://localhost:27017', (err, client) => {
+        if (err) throw err
+        const db = client.db('test')
+        db.collection('products').deleteOne({ _id: ObjectId(req.params.id) })
+            .then(function (data) {
+                res.send({ product: data[0] })
+            })
+            .catch(err => console.log('err', err))
+    })
+})
 
 app.listen(4500, () => { console.log("server is running on 4500") })

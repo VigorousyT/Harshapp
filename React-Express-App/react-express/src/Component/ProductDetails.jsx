@@ -1,18 +1,28 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 function ProductDetails() {
-  var params = useParams;
+  var params = useParams();
+  const [product, setproduct] = useState({});
   useEffect(() => {
-    var id = params;
-    fetch(`http://localhost:4500/ProductDetails/${id}`)
+    var { id } = params;
+    fetch(`http://localhost:4500/getAllProducts/${id}`)
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => setproduct({ ...data.product }));
   }, [params]);
-
   return (
-    <div>
-      <h1>Products</h1>
+    <div className="d-flex flex-wrap">
+      <div className="w-25 p-5">
+        <img className="img-thumbnail img-fluid" src={product.image} alt="" />
+      </div>
+      <div className=" w-50 container-fluid">
+        <h2 class="text-bg-info"> {product.title} </h2>
+        <h2 class="text-bg-info"> Description:- {product.description} </h2>
+        <h3 class="text-bg-info"> Category:- {product.category} </h3>
+        <h2 class="text-bg-secondary">${product.price}</h2>
+      </div>
     </div>
   );
 }

@@ -10,6 +10,13 @@ export default function Allproducts() {
       .then((res) => res.json())
       .then((product) => setproduct(product));
   }, []);
+  function deleteProduct(id) {
+    fetch(`http://localhost:4500/deleteProduct/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }
   return (
     <div>
       <div>
@@ -28,6 +35,14 @@ export default function Allproducts() {
                 <Link to={`/productDetails/${product["_id"]}`}>
                   {product.title}
                 </Link>
+                <button
+                  class="btn btn-outline-danger align-center border border-danger border border-3"
+                  onClick={() => {
+                    deleteProduct(product["_id"]);
+                  }}
+                >
+                  Delete
+                </button>
               </h5>
             </div>
           );
