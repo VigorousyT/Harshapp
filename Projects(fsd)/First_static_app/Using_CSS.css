@@ -1,15 +1,18 @@
-html {
-  font-family: "Quicksand", sans-serif;
+/*
   min-height: 100vh;
   max-width: 1280px;
+  */
+html {
+  font-family: "Quicksand", sans-serif;
   background-color: white;
   margin: 0 auto;
 }
 
 body {
   margin: 0px !important;
-  background-color: white;
   border: 1px solid #ddd;
+  background-color: black;
+  color: white;
 }
 
 .page-container {
