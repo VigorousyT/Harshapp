@@ -4,17 +4,16 @@ function Header() {
   return (
     <>
       <div className="nav-bar">
-        <nav class="navbar navbar-light bg-light">
-          <a href="/" className="navbar-brand">
-            <div>
-              <h1>BOOKS</h1>
-            </div>
-          </a>
-          <a href="/" className="navbar-brand">
-            <div>
-              <h1>BOOKS</h1>
-            </div>
-          </a>
+        <nav class="navbar navbar-light bg-light navbar-light">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="/Booklist" className="nav-link">
+                <div>
+                  <h1>BOOKS</h1>
+                </div>
+              </a>
+            </li>
+          </ul>
           <form class="form-inline">
             <div class="input-group">
               <input

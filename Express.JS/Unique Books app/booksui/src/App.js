@@ -1,7 +1,6 @@
 import './App.css';
 import Header from './component/Header';
 import { Outlet } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

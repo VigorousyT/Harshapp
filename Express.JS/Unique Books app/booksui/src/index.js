@@ -9,7 +9,7 @@ import {
   Route,
 } from "react-router-dom";
 import { Booklist } from './component/Booklist';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/js/bootstrap';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
