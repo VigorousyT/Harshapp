@@ -1,50 +1,50 @@
 // ------------------- Task 1: The Diagonal Sum  ---------------------- //
 
-function spDiag(n, arr) {
-    let mat = [];
+function diagonalSum(arr) {
     let primary = 0, secondary = 0;
-    while (arr.length) mat.push(arr.splice(0, n));
-
-    for (let i = 0; i < n; i++) {
-        for (let j = 0; j < n; j++) {
-            if (i === j) primary += mat[i][j];
-
-            if ((i + j) === (n - 1)) secondary += mat[i][j];
-        }
-
+    for (let row = 0; row < arr.length; row++) {
+        primary += arr[row][row];
+        secondary += arr[row][arr.length - row - 1];
     }
-    console.log(primary + secondary)
-    console.log(JSON.stringify(mat));
-
+    console.log(primary + secondary);
 }
 
-spDiag(3, [1, 2, 3,
-    8, 9, 4,
-    7, 6, 5])
-
-//--------- First understand this then do it in the main assignment suggesting to rivese it again --------//
+diagonalSum([[2, 9, 6], [5, 2, 8], [5, 7, 9]]);
 
 //------------------------Task 2: Pyramid of Asterisks--------------------------// 
 
-function pyramid(n) {
-
-
-
-    for (let i = 1; i <= n; i++) {
-
-        let str = ' '.repeat(n - i);
-
-        let str2 = '*'.repeat(i * 2 - 1)
-
-
-
-        console.log(str + str2 + str);
-
-    }
+function pyramidOfAsterisks() {
 
 }
 
-pyramid(5);
+function pyramidOfAsterisks(n) {
+    for (let i = 1; i <= n; i++) {
+        let str = ' '.repeat(n - i);
+        let str2 = '*'.repeat(i * 2 - 1)
+
+        console.log(str + str2 + str);
+    }
+}
+pyramidOfAsterisks(12);
 
 //--------- First understand this then do it in the main assignment suggesting to rivese it again --------//
 
+
+const Book = function (title, author, isbn, stock = 0, cost) {
+    this.title = title;
+    this.author = author;
+    this.isbn = isbn;
+    this.stock = stock;
+    this.cost = cost;
+    this.summary = () => `${this.title} by ${this.author} (ISBN: ${this.isbn}) costs ${this.cost}`;
+    this.isStockAvailable = () => stock ? 'Available at the moment' : 'not available at the moment';
+    this.isAvailable = () => `${this.title} is ${this.stock}`;
+};
+
+const summary = new Book('The Design of Everyday Things', 'Don Norman', '978-0-465-05571-5', '$17.99');
+console.log(summary.summary());
+const isAvailable = new Book('The Design of Everyday Things', 0);
+
+
+
+//  by Don Norman (ISBN: 978-0-465-05571-5) costs $17.99
