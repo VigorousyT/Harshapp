@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import { Booklist } from './component/Booklist';
 import '../node_modules/bootstrap/dist/js/bootstrap';
+import Addbooks from './component/Addbooks';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,10 +18,13 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route path="/Booklist" element={<Booklist />}></Route>
+        <Route path="/booklist" element={<Booklist />}>
+        </Route>
+        <Route path="/addbooks" element={<Addbooks />}>
+        </Route>
       </Route>
     </Routes>
-  </BrowserRouter>
+  </BrowserRouter >
 );
 
 // If you want to start measuring performance in your app, pass a function

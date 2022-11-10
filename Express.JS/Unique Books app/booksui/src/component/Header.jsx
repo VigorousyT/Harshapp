@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -7,11 +8,18 @@ function Header() {
         <nav class="navbar navbar-light bg-light navbar-light">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a href="/Booklist" className="nav-link">
+              <Link to="/booklist" className="nav-link">
                 <div>
-                  <h1>BOOKS</h1>
+                  <h3>BOOKS</h3>
                 </div>
-              </a>
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link to="/addbooks" className="nav-link">
+                <div>
+                  <h3>ADD BOOKS</h3>
+                </div>
+              </Link>
             </li>
           </ul>
           <form class="form-inline">
