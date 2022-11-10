@@ -1,0 +1,38 @@
+
+[
+    {
+      "id": 1,
+      "name": "Elsa",
+      "movie": "Frozen",
+      "description": "Elsa looks poised, regal and reserved, but in reality, she lives in fear as she wrestles with a mighty secret.",
+      "year": 2013
+    },
+    {
+      "id": 2,
+      "name": "Belle",
+      "movie": "Beauty and the beast",
+      "description": "She is the only daughter of Maurice, an inventor with whom she resides in a small, French village",
+      "year": 1991
+    },
+    {
+      "id": 3,
+      "name": "Simba",
+      "movie": "Lion King",
+      "description": "Simba is a courageous, yet occasionally low-self-esteemed ruler. He knows of his duty to rule the Pride Lands, but his fear of failure and disrespect often causes him to not do as well as he can.",
+      "year": 1994
+    },
+    {
+      "id": 4,
+      "name": "Olaf",
+      "movie": "Frozen",
+      "description": "Olaf is by far the friendliest snowman in Arendelle. He is innocent, outgoing and loves all things summer",
+      "year": 2013
+    },
+    {
+      "id": 5,
+      "name": "Buzz Lightyear",
+      "movie": "Toy Story",
+      "description": "He is a toy Space Ranger superhero according to the movies and an action figure in the franchise",
+      "year": 2013
+    }
+  ]
