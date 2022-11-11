@@ -1,0 +1,27 @@
+{
+    "name": "end",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "nodemon -q -x 'clear;node' --experimental-modules --no-warnings  server.js",
+      "test": "./node_modules/.bin/jest --watchAll"
+    },
+    "dependencies": {
+      "browser-sync": "^2.26.13",
+      "gulp": "^4.0.2",
+      "nodemon": "^2.0.4"
+    },
+    "backEndSettings": {
+      "packageInstallRoot": "/",
+      "packageRun": "node server.js",
+      "openFiles": [
+        "app.js"
+      ]
+    },
+    "devDependencies": {
+      "jest": "^26.0.1",
+      "supertest": "^4.0.2"
+    }
+  }
+  
