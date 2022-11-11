@@ -1,0 +1,42 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+h1 {
+  font-size: 18px;
+  line-height: 28px;
+}
+p.p1 {
+  font-size: 12px;
+  line-height: 22px; /*20px 18px*/
+}
+div button {
+  background-color: white;
+  color: black;
+  height: 50px;
+  width: 80px;
+  border: 1px solid black;
+  font-size: 13px;
+}
+input[type="submit"] {
+  background-color: black;
+  color: white;
+  height: 50px;
+  width: 80px;
+  border: 1px solid black;
+  font-size: 13px;
+}
+div a {
+  text-decoration: none;
+  color: white;
+}
+div a:hover {
+  text-decoration: underline;
+}
+div.link {
+  width: 80px;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, rgb(255, 113, 42), rgb(193, 0, 212));
+  float: left;
+  margin-right: 10px;
+}
