@@ -4,40 +4,26 @@ import songs from "./services/songs";
 
 class App extends Component {
   state = {
-
+    songs,
   };
-
+  sortByRating = () => {
+    this.setState({
+      songs: [...this.state.songs.sort((a, b) => b.rating - a.rating)],
+    });
+  };
+  sortByTitle = () => {
+    this.setState({
+      songs: [
+        ...this.state.songs.sort((a, b) =>
+          a.title.toUpperCase() < b.title.toUpperCase() ? -1 : 1
+        ),
+      ],
+    });
+  };
   render() {
     return (
       <div id="super-tunes">
-
-      </div>
-    );
-  }
-}
-
-export default App;
-
-// songs,
-
- // sortByRating = () => {
-  //   this.setState({
-  //     songs: [...this.state.songs.sort((a, b) => b.rating - a.rating)],
-  //   });
-  // };
-  // sortByTitle = () => {
-  //   this.setState({
-  //     songs: [
-  //       ...this.state.songs.sort((a, b) =>
-  //         a.title.toUpperCase() < b.title.toUpperCase() ? -1 : 1
-  //       ),
-  //     ],
-  //   });
-  // };
-
-
-
-/* <h2 id="st-title">SuperTunes - Songs of the Week</h2>
+        <h2 id="st-title">SuperTunes - Songs of the Week</h2>
         <button className="st-btn" onClick={this.sortByTitle}>
           Sort By Title
         </button>
@@ -48,4 +34,10 @@ export default App;
           {this.state.songs.map((song) => (
             <SongCard key={song.id} data={song} />
           ))}
-        </div> */
+        </div>
+      </div>
+    );
+  }
+}
+
+export default App;
