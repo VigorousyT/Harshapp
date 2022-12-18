@@ -138,7 +138,7 @@ nav ul li a {
 
 .quote {
   display: block;
-  background-color: #eeeeee;
+  background-color: brown;
   padding: 50px;
   text-align: center;
   font-style: italic;
@@ -290,10 +290,8 @@ input[type="submit"]:hover {
 }
 
 .footer {
-  position: fixed;
   left: 0;
   right: 0;
-  bottom: 0;
   background-color: #333333;
   color: white;
   text-align: center;

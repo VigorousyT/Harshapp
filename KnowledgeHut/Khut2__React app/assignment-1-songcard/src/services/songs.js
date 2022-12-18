@@ -68,7 +68,14 @@ const songs = [
         title: "Any Song",
         artist: "Zico",
         rating: 4
-    }
+    },
+    {
+        id: "BBC",
+        thumb: "",
+        title: "jalebi bai",
+        artist: "CCC",
+        rating: 3
+    },
 ];
 
 export default songs;
